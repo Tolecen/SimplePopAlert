@@ -14,6 +14,11 @@
 		97AA6C391AB8391B00ED5F39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AA6C381AB8391B00ED5F39 /* Images.xcassets */; };
 		97AA6C3C1AB8391B00ED5F39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AA6C3A1AB8391B00ED5F39 /* LaunchScreen.xib */; };
 		97AA6C481AB8391B00ED5F39 /* SimplePopAlertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AA6C471AB8391B00ED5F39 /* SimplePopAlertTests.m */; };
+		97AA6C531AB8395C00ED5F39 /* PromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AA6C521AB8395C00ED5F39 /* PromptView.m */; };
+		97AA6C571AB83B9700ED5F39 /* topArrow_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 97AA6C541AB83B9700ED5F39 /* topArrow_prompt.png */; };
+		97AA6C581AB83B9700ED5F39 /* bottomArrow_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 97AA6C551AB83B9700ED5F39 /* bottomArrow_prompt.png */; };
+		97AA6C591AB83B9700ED5F39 /* leftArrow_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 97AA6C561AB83B9700ED5F39 /* leftArrow_prompt.png */; };
+		97AA6C5B1AB83C4000ED5F39 /* rightArrow_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 97AA6C5A1AB83C4000ED5F39 /* rightArrow_prompt.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,12 @@
 		97AA6C411AB8391B00ED5F39 /* SimplePopAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimplePopAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AA6C461AB8391B00ED5F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97AA6C471AB8391B00ED5F39 /* SimplePopAlertTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimplePopAlertTests.m; sourceTree = "<group>"; };
+		97AA6C511AB8395C00ED5F39 /* PromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PromptView.h; sourceTree = "<group>"; };
+		97AA6C521AB8395C00ED5F39 /* PromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PromptView.m; sourceTree = "<group>"; };
+		97AA6C541AB83B9700ED5F39 /* topArrow_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topArrow_prompt.png; sourceTree = "<group>"; };
+		97AA6C551AB83B9700ED5F39 /* bottomArrow_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomArrow_prompt.png; sourceTree = "<group>"; };
+		97AA6C561AB83B9700ED5F39 /* leftArrow_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftArrow_prompt.png; sourceTree = "<group>"; };
+		97AA6C5A1AB83C4000ED5F39 /* rightArrow_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrow_prompt.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +96,12 @@
 				97AA6C301AB8391B00ED5F39 /* AppDelegate.m */,
 				97AA6C321AB8391B00ED5F39 /* ViewController.h */,
 				97AA6C331AB8391B00ED5F39 /* ViewController.m */,
+				97AA6C511AB8395C00ED5F39 /* PromptView.h */,
+				97AA6C521AB8395C00ED5F39 /* PromptView.m */,
+				97AA6C541AB83B9700ED5F39 /* topArrow_prompt.png */,
+				97AA6C551AB83B9700ED5F39 /* bottomArrow_prompt.png */,
+				97AA6C561AB83B9700ED5F39 /* leftArrow_prompt.png */,
+				97AA6C5A1AB83C4000ED5F39 /* rightArrow_prompt.png */,
 				97AA6C351AB8391B00ED5F39 /* Main.storyboard */,
 				97AA6C381AB8391B00ED5F39 /* Images.xcassets */,
 				97AA6C3A1AB8391B00ED5F39 /* LaunchScreen.xib */,
@@ -199,9 +216,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97AA6C591AB83B9700ED5F39 /* leftArrow_prompt.png in Resources */,
+				97AA6C571AB83B9700ED5F39 /* topArrow_prompt.png in Resources */,
 				97AA6C371AB8391B00ED5F39 /* Main.storyboard in Resources */,
+				97AA6C5B1AB83C4000ED5F39 /* rightArrow_prompt.png in Resources */,
 				97AA6C3C1AB8391B00ED5F39 /* LaunchScreen.xib in Resources */,
 				97AA6C391AB8391B00ED5F39 /* Images.xcassets in Resources */,
+				97AA6C581AB83B9700ED5F39 /* bottomArrow_prompt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97AA6C531AB8395C00ED5F39 /* PromptView.m in Sources */,
 				97AA6C341AB8391B00ED5F39 /* ViewController.m in Sources */,
 				97AA6C311AB8391B00ED5F39 /* AppDelegate.m in Sources */,
 				97AA6C2E1AB8391B00ED5F39 /* main.m in Sources */,

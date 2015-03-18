@@ -3,25 +3,28 @@
 //  TalkingPet
 //
 //  Created by Tolecen on 15/2/11.
-//  Copyright (c) 2015年 wangxr. All rights reserved.
+//  Copyright (c) 2015年 Tolecen. All rights reserved.
 //
 
 #import "PromptView.h"
 
 @implementation PromptView
--(id)initWithPoint:(CGPoint)arrowPoint image:(UIImage *)image arrowDirection:(int)direction
+-(id)initWithFrame:(CGRect)frame image:(UIImage *)image arrowDirection:(int)direction
 {
-    //direction 上左下右 1 2 3 4;
+    //Arrow direction, top left bottom right, 1 2 3 4;
+    
     if (self = [super init]) {
-        CGSize iSize = image.size;
         if (direction==3) {
-            [self setFrame:CGRectMake(arrowPoint.x-iSize.width/4, arrowPoint.y-iSize.height/2, iSize.width/2, iSize.height/2)];
+            [self setFrame:frame];
         }
         else if (direction==2){
-            [self setFrame:CGRectMake(arrowPoint.x, arrowPoint.y-iSize.height/4, iSize.width/2, iSize.height/2)];
+            [self setFrame:frame];
         }
         else if (direction==1){
-            [self setFrame:CGRectMake(arrowPoint.x-iSize.width/4, arrowPoint.y, iSize.width/2, iSize.height/2)];
+            [self setFrame:frame];
+        }
+        else if (direction==4){
+            [self setFrame:frame];
         }
         
         theDirection = direction;
@@ -47,7 +50,26 @@
 -(void)first
 {
     __weak id weakSelf = self;
-    if (theDirection==3) {
+    if (theDirection==4) {
+        [UIView animateWithDuration:0.3 animations:^{
+            [weakSelf setFrame:CGRectMake(originRect.origin.x+10, originRect.origin.y, originRect.size.width, originRect.size.height)];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.4 animations:^{
+                [weakSelf setFrame:CGRectMake(originRect.origin.x, originRect.origin.y, originRect.size.width, originRect.size.height)];
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.3 animations:^{
+                    [weakSelf setFrame:CGRectMake(originRect.origin.x+10, originRect.origin.y, originRect.size.width, originRect.size.height)];
+                } completion:^(BOOL finished) {
+                    [UIView animateWithDuration:0.4 animations:^{
+                        [weakSelf setFrame:CGRectMake(originRect.origin.x, originRect.origin.y, originRect.size.width, originRect.size.height)];
+                    } completion:^(BOOL finished) {
+                        [weakSelf performSelector:@selector(second) withObject:nil afterDelay:1];
+                    }];
+                }];
+            }];
+        }];
+    }
+    else if (theDirection==3) {
         [UIView animateWithDuration:0.3 animations:^{
             [weakSelf setFrame:CGRectMake(originRect.origin.x, originRect.origin.y+10, originRect.size.width, originRect.size.height)];
         } completion:^(BOOL finished) {
@@ -108,7 +130,26 @@
 -(void)second
 {
     __weak id weakSelf = self;
-    if (theDirection==3) {
+    if (theDirection==4) {
+        [UIView animateWithDuration:0.3 animations:^{
+            [weakSelf setFrame:CGRectMake(originRect.origin.x+10, originRect.origin.y, originRect.size.width, originRect.size.height)];
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.4 animations:^{
+                [weakSelf setFrame:CGRectMake(originRect.origin.x, originRect.origin.y, originRect.size.width, originRect.size.height)];
+            } completion:^(BOOL finished) {
+                [UIView animateWithDuration:0.3 animations:^{
+                    [weakSelf setFrame:CGRectMake(originRect.origin.x+10, originRect.origin.y, originRect.size.width, originRect.size.height)];
+                } completion:^(BOOL finished) {
+                    [UIView animateWithDuration:0.4 animations:^{
+                        [weakSelf setFrame:CGRectMake(originRect.origin.x, originRect.origin.y, originRect.size.width, originRect.size.height)];
+                    } completion:^(BOOL finished) {
+                        [weakSelf performSelector:@selector(hideIt) withObject:nil afterDelay:1];
+                    }];
+                }];
+            }];
+        }];
+    }
+    else if (theDirection==3) {
         [UIView animateWithDuration:0.3 animations:^{
             [weakSelf setFrame:CGRectMake(originRect.origin.x, originRect.origin.y+10, originRect.size.width, originRect.size.height)];
         } completion:^(BOOL finished) {

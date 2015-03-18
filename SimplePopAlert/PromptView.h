@@ -3,7 +3,7 @@
 //  TalkingPet
 //
 //  Created by Tolecen on 15/2/11.
-//  Copyright (c) 2015年 wangxr. All rights reserved.
+//  Copyright (c) 2015年 Tolecen. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -14,7 +14,7 @@
     CGRect originRect;
 }
 @property (nonatomic,strong)UIImageView * promptView;
--(id)initWithPoint:(CGPoint)arrowPoint image:(UIImage *)image arrowDirection:(int)direction;
+-(id)initWithFrame:(CGRect)frame image:(UIImage *)image arrowDirection:(int)direction;
 -(void)show;
 
 
